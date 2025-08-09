@@ -57,6 +57,7 @@ header .header-actions{
     height: 40px;
     cursor: pointer;
     align-self: center;
+}
 .btn {
     background: #28a745;
     color: #fff;
