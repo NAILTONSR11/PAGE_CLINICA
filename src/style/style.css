@@ -12,6 +12,7 @@ header {
     background: #fff;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
+    font-weight: bold;
 }
 header .header-content {
     display: flex;
@@ -23,6 +24,14 @@ header nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    padding: 5px;
+}
+
+header nav a:hover{
+    border-bottom: 2px solid #28a745;
+    background-color: #2222225b;
+    border-radius: 32px;
+    color: #fff;
 }
 
 header nav a::before{
@@ -44,8 +53,10 @@ header .header-actions{
     border-radius: 30px;
     align-self: center;
     border: none;
+    box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.12);
 }
-
 .pesquisa_inicial::placeholder{
     color: #fff;
 }
@@ -65,6 +76,10 @@ header .header-actions{
     border: none;
     text-decoration: none;
     border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.12);
 }
 .hero {
   background-image: url('/src/assets/imgs/ChatGPT\ Image\ 9\ de\ ago.\ de\ 2025\,\ 08_57_57.png');
@@ -91,13 +106,218 @@ header .header-actions{
     height: 50vh;
     align-items: center;
 }
+.hero-content > .hero-text > h1{
+    font-size: 4rem;
+    width: 650px;
+    font-weight: bold;
+}
+.hero-content > .hero-text > p{
+    font-size: 1.5rem;
+    width: 700px;
+    font-weight: bold;
+}
+
 .hero-form {
+    display: grid;
+    gap: 10px;
+    position: relative;
     background: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 50px;
     color: #333;
-    width: 300px;
+    width: 623px;
+    height: 520px;
+    border: 0.5px solid #28a746;
+    box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.12);
+    top: 150px;
+    font-weight: bold;
+
+    transition: background-image 1s ease-in-out;
 }
+
+.icon_x{
+    position: absolute;
+    top: -20px;
+    justify-self: end;
+    cursor: pointer;
+}
+.icon_x:hover{
+    width: 50px;
+    box-shadow: 
+    0 2px 4px #28a746,
+    0 4px 8px #28a746;
+}
+
+.icon_form{
+    position: absolute;
+    justify-self:end;
+    top: 165px;
+    right: 30px;
+}
+.icon_form1{
+    position: absolute;
+    justify-self:end;
+    top: 220px;
+    right: 30px;
+}
+.icon_form2{
+    position: absolute;
+    justify-self:end;
+    top: 273px;
+    right: 30px;
+}
+.icon_form3{
+    position: absolute;
+    justify-self:end;
+    top: 325px;
+    right: 30px;
+}
+
+.hero-form1{
+    display: none;
+}
+
+.hero-form > h1{
+    align-self: center;
+    font-size: 1.8rem;
+    margin: 10px;
+}
+.hero-form > p{
+    align-self: center;
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.hero-form > .inp_norm{
+    border-radius:32px;
+    border: none;
+    background-color: #C2C2C2;
+    padding: 10px;
+
+    appearance: none; /* remove estilo padrão */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+
+.hero-form > .inp_espe{
+    border-radius:20px;
+    border: none;
+    background-color: #C2C2C2;
+    max-width: 450px;
+    min-width: 450px;
+    max-height:100px;
+    min-height: 100px;
+    padding: 10px;
+
+    appearance: none; /* remove estilo padrão */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+
+.inp_norm:focus, .inp_espe:focus{
+    border: 1.5px solid #28a745;
+    background-color:#c2c2c269;
+}
+
+.inp_norm:focus::placeholder, .inp_espe:focus::placeholder{
+    color: #383434;
+}
+
+.btn-form{
+    align-self: center;
+    justify-self: center;
+    width: 30%;
+}
+
+.info{
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+
+    & span{
+        font-weight: bold;
+    }
+
+    & p{
+        color: #757474;
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+
+}
+
+.icon_contt{
+    position: relative;
+    top: 5px;
+}
+
+.services{
+    text-align: center;
+}
+
+.title{
+        font-size: 4rem;
+    }
+.subtt{
+        font-size: 1.5rem;
+        margin-top: -40px;
+        color: #757474;
+    }
+
+.service-items{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.service > p{
+    font-weight: bold;
+    color: #615e5e;
+}
+
+.iconServ{
+    margin-top: 30px;
+    border: 1px solid #28a745;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btnServ{
+    position: relative;
+    top: 30px;
+}
+
+.whyCon{
+    background-color: #F9F8F8;
+}
+
+.why{
+    text-align: center;
+}
+.why-items{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.btnAgend{
+    position: relative;
+    top: 30px;
+}
+
+
+
+
+
+
+
+
+
 .services, .why, .cta, .general, .testimonials, .vacancies {
     padding: 50px 0;
 }

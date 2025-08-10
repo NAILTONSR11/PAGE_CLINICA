@@ -17,3 +17,23 @@ function trocarImagem() {
 // Troca a cada 5 segundos
 trocarImagem(); // define a primeira
 setInterval(trocarImagem, 3000);
+
+
+// Formulário de contato
+
+const botaoContt = document.getElementsByClassName('btn-contato-form')[0];
+const botaoContt1 = document.getElementsByClassName('btn-contato-form1')[0];
+const botaoClose = document.getElementsByClassName('icon_x')[0];
+const forms = document.getElementsByClassName('hero-form1')[0];
+
+botaoContt.addEventListener("click", () => {
+  forms.style.display = "grid";
+});
+
+botaoContt1.addEventListener("click", () => {
+  forms.style.display = "grid";
+});
+
+botaoClose.addEventListener("click", () => {
+  forms.style.display = "none";
+});
