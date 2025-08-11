@@ -1,24 +1,30 @@
+/* Estilo base e fonte */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     color: #333;
 }
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
+
+/* HEADER */
 header {
     background: #fff;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
     font-weight: bold;
 }
+
 header .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 header nav a {
     margin: 0 10px;
     text-decoration: none;
@@ -27,25 +33,29 @@ header nav a {
     padding: 5px;
 }
 
-header nav a:hover{
+/* Efeito hover nos links do menu */
+header nav a:hover {
     border-bottom: 2px solid #28a745;
     background-color: #2222225b;
     border-radius: 32px;
     color: #fff;
 }
 
-header nav a::before{
+/* Antes dos links, aparece um diamante verde */
+header nav a::before {
     content: "♦";
     color: #28a745;
     margin-right: 5px;
 }
 
-header .header-actions{
+/* Container de pesquisa e botão no header */
+header .header-actions {
     display: flex;
     gap: 10px;
 }
 
-.pesquisa_inicial{
+/* Input de pesquisa estilizado */
+.pesquisa_inicial {
     background-color: #111111;
     color: #fff;
     width: 160px;
@@ -53,15 +63,17 @@ header .header-actions{
     border-radius: 30px;
     align-self: center;
     border: none;
-    box-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.08),
-    0 4px 8px rgba(0, 0, 0, 0.12);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 4px 8px rgba(0, 0, 0, 0.12);
 }
-.pesquisa_inicial::placeholder{
+
+.pesquisa_inicial::placeholder {
     color: #fff;
 }
 
-.icon-search{
+/* Ícone da lupa posicionado com right para ficar dentro do input */
+.icon-search {
     position: relative;
     right: 55px;
     width: 40px;
@@ -69,6 +81,8 @@ header .header-actions{
     cursor: pointer;
     align-self: center;
 }
+
+/* Botões principais estilo */
 .btn {
     background: #28a745;
     color: #fff;
@@ -77,27 +91,41 @@ header .header-actions{
     text-decoration: none;
     border-radius: 30px;
     cursor: pointer;
-    box-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.08),
-    0 4px 8px rgba(0, 0, 0, 0.12);
-}
-.hero {
-  background-image: url('/src/assets/imgs/ChatGPT\ Image\ 9\ de\ ago.\ de\ 2025\,\ 08_57_57.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 20%; /* experimente 50% / 55% / 60% / 70% até ficar ok */
-  color: #fff;
-  padding: 50px 0;
-  position: relative;
-  transition: background-image 1s ease-in-out; /* transição suave */
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 4px 8px rgba(0, 0, 0, 0.12);
 }
 
+.btn:hover {
+    background: #208a39;
+    color: #fff;
+}
+
+/* HERO */
+
+/* ATENÇÃO: substitua o nome da imagem abaixo para um nome simples e sem espaços/caracteres especiais */
+.hero {
+    background-image: url('/src/assets/imgs/hero-bg.jpg'); /* Altere para o caminho correto da sua imagem */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+}
+
+/* Overlay escuro sobre a imagem */
 .hero .overlay {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.274);
 }
+
+/* Conteúdo do hero em flexbox */
 .hero-content {
     position: relative;
     display: flex;
@@ -106,21 +134,26 @@ header .header-actions{
     height: 50vh;
     align-items: center;
 }
-.hero-content > .hero-text > h1{
+
+/* Título grande do hero */
+.hero-content > .hero-text > h1 {
     font-size: 4rem;
     width: 650px;
     font-weight: bold;
 }
-.hero-content > .hero-text > p{
+
+/* Subtítulo do hero */
+.hero-content > .hero-text > p {
     font-size: 1.5rem;
     width: 700px;
     font-weight: bold;
 }
 
+/* Formulário dentro do hero */
 .hero-form {
     display: grid;
     gap: 10px;
-    position: relative;
+    position: relative; /* importante para os ícones absolutos */
     background: #fff;
     padding: 20px;
     border-radius: 50px;
@@ -128,210 +161,237 @@ header .header-actions{
     width: 623px;
     height: 520px;
     border: 0.5px solid #28a746;
-    box-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.08),
-    0 4px 8px rgba(0, 0, 0, 0.12);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 4px 8px rgba(0, 0, 0, 0.12);
     top: 150px;
     font-weight: bold;
-
     transition: background-image 1s ease-in-out;
 }
 
-.icon_x{
+/* Ícone de fechar formulário posicionado */
+.icon_x {
     position: absolute;
     top: -20px;
-    justify-self: end;
+    right: 20px;
     cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
-.icon_x:hover{
+
+.icon_x:hover {
     width: 50px;
-    box-shadow: 
-    0 2px 4px #28a746,
-    0 4px 8px #28a746;
 }
 
-.icon_form{
+/* Ícones dos inputs posicionados */
+.icon_form {
     position: absolute;
-    justify-self:end;
-    top: 165px;
+    top: 150px;
     right: 30px;
 }
-.icon_form1{
+.icon_form1 {
     position: absolute;
-    justify-self:end;
-    top: 220px;
+    top: 213px;
     right: 30px;
 }
-.icon_form2{
+.icon_form2 {
     position: absolute;
-    justify-self:end;
-    top: 273px;
+    top: 276px;
     right: 30px;
 }
-.icon_form3{
+.icon_form3 {
     position: absolute;
-    justify-self:end;
-    top: 325px;
+    top: 335px;
     right: 30px;
 }
 
-.hero-form1{
+/* Formulário inicial escondido */
+.hero-form1 {
     display: none;
 }
 
-.hero-form > h1{
-    align-self: center;
-    font-size: 1.8rem;
-    margin: 10px;
-}
-.hero-form > p{
-    align-self: center;
-    font-size: 1rem;
-    margin: 10px;
-}
-
-.hero-form > .inp_norm{
-    border-radius:32px;
-    border: none;
-    background-color: #C2C2C2;
-    padding: 10px;
-
-    appearance: none; /* remove estilo padrão */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    outline: none;
-}
-
-.hero-form > .inp_espe{
-    border-radius:20px;
-    border: none;
-    background-color: #C2C2C2;
-    max-width: 450px;
-    min-width: 450px;
-    max-height:100px;
-    min-height: 100px;
-    padding: 10px;
-
-    appearance: none; /* remove estilo padrão */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    outline: none;
-}
-
-.inp_norm:focus, .inp_espe:focus{
-    border: 1.5px solid #28a745;
-    background-color:#c2c2c269;
-}
-
-.inp_norm:focus::placeholder, .inp_espe:focus::placeholder{
-    color: #383434;
-}
-
-.btn-form{
-    align-self: center;
-    justify-self: center;
-    width: 30%;
-}
-
-.info{
-    display: flex;
-    gap: 50px;
-    margin-top: 30px;
-
-    & span{
-        font-weight: bold;
-    }
-
-    & p{
-        color: #757474;
-        margin-left: 30px;
-        margin-top: 5px;
-    }
-
-}
-
-.icon_contt{
-    position: relative;
-    top: 5px;
-}
-
-.services{
-    text-align: center;
-}
-
-.title{
-        font-size: 4rem;
-    }
-.subtt{
-        font-size: 1.5rem;
-        margin-top: -40px;
-        color: #757474;
-    }
-
-.service-items{
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-}
-
-.service > p{
+/* Estilo dos inputs */
+.inp_norm {
+    border-radius: 30px;
+    height: 50px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
     font-weight: bold;
-    color: #615e5e;
 }
 
-.iconServ{
-    margin-top: 30px;
-    border: 1px solid #28a745;
-    padding: 10px;
-    border-radius: 50%;
+
+/* Textarea especial */
+.inp_espe {
+    border-radius: 30px;
+    height: 80px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-weight: bold;
+    resize: none;
+}
+
+/* Botão dentro do formulário */
+.btn-form {
+    border-radius: 30px;
+    height: 45px;
+    border: none;
+    background: #28a746;
+    color: #fff;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.btnServ{
-    position: relative;
-    top: 30px;
+.btn-form:hover {
+    background: #208a39;
 }
 
-.whyCon{
-    background-color: #F9F8F8;
-}
-
-.why{
-    text-align: center;
-}
-.why-items{
+/* Contatos - informações */
+.info {
     display: flex;
     gap: 50px;
-    justify-content: center;
+    margin-top: 30px;
 }
 
-.btnAgend{
-    position: relative;
-    top: 30px;
+.info span {
+    font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-.services, .why, .cta, .general, .testimonials, .vacancies {
-    padding: 50px 0;
+.info p {
+    color: #757474;
+    margin-left: 30px;
+    margin-top: 5px;
 }
-.services h2, .why h2, .general h2, .testimonials h2, .vacancies h2 {
+
+/* Ícones dos contatos */
+.icon_contt {
+    width: 35px;
+    height: 25px;
+    padding-right: 10px;
+}
+
+/* Serviços */
+.services {
+    padding: 40px 0;
     text-align: center;
 }
-.footer-content {
+
+.title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 3rem;
+}
+
+.subtt {
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: normal;
+}
+
+/* Itens dos serviços em grid flexível */
+.service-items {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.footer-bottom {
-    text-align: center;
+
+.service {
+    width: 160px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #666;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 4px 8px rgba(0, 0, 0, 0.12);
     padding: 10px;
-    background: #222;
-    color: #fff;
+}
+
+.iconServ {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+/* Botão conhecer melhor */
+.btnServ {
+    margin-top: 40px;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-weight: bold;
+}
+
+/* Títulos acima do carrossel */
+.why{
+text-align: center;
+background-color: #66666613;
+border-radius: 8px;
+padding: 10px;
+}
+
+/* Carrossel Bootstrap personalizado */
+
+.meu-carrossel-container {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+/* Remove o fundo padrão dos controles */
+.meu-carrossel-container .carousel-control-prev,
+.meu-carrossel-container .carousel-control-next {
+    background: #28a74681;
+    align-self: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 1; /* Para garantir visibilidade */
+    cursor: pointer;
+}
+
+.meu-carrossel-container .carousel-control-prev-icon,
+.meu-carrossel-container .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Ajusta setas para ficar centralizadas no círculo */
+.meu-carrossel-container .carousel-control-prev-icon,
+.meu-carrossel-container .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Títulos no carrossel */
+.carousel-inner h2 {
+    color: #666;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .hero-content > .hero-text > h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .hero-content > .hero-text > p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .hero-form {
+        width: 100%;
+        height: auto;
+        top: 0;
+        margin-top: 20px;
+    }
+
+    .service-items {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
