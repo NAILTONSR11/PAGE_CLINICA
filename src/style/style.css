@@ -35,10 +35,11 @@ header nav a {
 
 /* Efeito hover nos links do menu */
 header nav a:hover {
-    border-bottom: 2px solid #28a745;
-    background-color: #2222225b;
-    border-radius: 32px;
-    color: #fff;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+        box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.055),
+        0 4px 8px rgba(0, 0, 0, 0.082);
 }
 
 /* Antes dos links, aparece um diamante verde */
@@ -58,8 +59,8 @@ header .header-actions {
 .pesquisa_inicial {
     background-color: #111111;
     color: #fff;
-    width: 160px;
-    height: 30px;
+    width: 165px;
+    height: 35px;
     border-radius: 30px;
     align-self: center;
     border: none;
@@ -173,7 +174,7 @@ header .header-actions {
 .icon_x {
     position: absolute;
     top: -20px;
-    right: 20px;
+    right: 0px;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
 }
@@ -231,6 +232,7 @@ header .header-actions {
 
 /* Botão dentro do formulário */
 .btn-form {
+    justify-self: center;
     border-radius: 30px;
     height: 45px;
     border: none;
@@ -304,6 +306,7 @@ header .header-actions {
         0 2px 4px rgba(0, 0, 0, 0.08),
         0 4px 8px rgba(0, 0, 0, 0.12);
     padding: 10px;
+    cursor: pointer;
 }
 
 .iconServ {
@@ -322,7 +325,7 @@ header .header-actions {
 /* Títulos acima do carrossel */
 .why{
 text-align: center;
-background-color: #66666613;
+/* background-color: #66666613; */
 border-radius: 8px;
 padding: 10px;
 }
@@ -359,11 +362,68 @@ padding: 10px;
     height: 20px;
 }
 
+/* ajustar as imagens do carrossel */
+.carousel-item > img{
+    border-radius: 8px;
+}
+
 /* Títulos no carrossel */
 .carousel-inner h2 {
     color: #666;
     font-weight: bold;
 }
+
+/* chamada para a ação */
+.cta{
+    background-color: #28a745;
+    height: 31.5vh;
+    margin-top: 50px;
+}
+
+.cta > .container{
+    display: flex;
+    gap: 70px;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.cta > .container > .cta-image > img{
+    width: 420px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.cta > .container > .cta-text{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    & span{
+        margin-bottom: 15px;
+    }
+}
+
+.cta > .container > .cta-text > .btn{
+    background-color: #fff;
+    color: #28a745;
+    font-weight: bold;
+    justify-self: center;
+}
+
+
+
+
+
+
+
+
+
 
 /* Responsividade */
 @media (max-width: 768px) {
