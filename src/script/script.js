@@ -24,17 +24,25 @@ setInterval(trocarImagem, 3000);
 const botaoContt = document.getElementsByClassName('btn-contato-form')[0];
 const botaoContt1 = document.getElementsByClassName('btn-contato-form1')[0];
 const botaoClose = document.getElementsByClassName('icon_x')[0];
-const forms = document.getElementsByClassName('hero-form1')[0];
+const forms = document.getElementsByClassName('hero-form')[0];
 
 botaoContt.addEventListener("click", () => {
-  forms.style.display = "grid";
+  forms.classList.add('ativo');
+  forms.style.opacity = '1';
+  forms.style.transform = 'translateY(0)';
 });
 
 botaoContt1.addEventListener("click", () => {
-  forms.style.display = "grid";
+    forms.classList.add('ativo');
+    forms.style.opacity = '1';
+    forms.style.transform = 'translateY(0)';
 });
 
 botaoClose.addEventListener("click", () => {
-  forms.style.display = "none";
+  forms.style.opacity = '0';
+  forms.style.transform = 'translateY(-20px)';
+  setTimeout(() => {
+    forms.classList.remove('show');
+  }, 400);
 });
 

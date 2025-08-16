@@ -152,9 +152,9 @@ header .header-actions {
 
 /* Formulário dentro do hero */
 .hero-form {
-    display: grid;
+    display: none;
     gap: 10px;
-    position: relative; /* importante para os ícones absolutos */
+    position: relative; /* importante para os ícones*/
     background: #fff;
     padding: 20px;
     border-radius: 50px;
@@ -167,7 +167,9 @@ header .header-actions {
         0 4px 8px rgba(0, 0, 0, 0.12);
     top: 150px;
     font-weight: bold;
-    transition: background-image 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 /* Ícone de fechar formulário posicionado */
@@ -176,7 +178,6 @@ header .header-actions {
     top: -20px;
     right: 0px;
     cursor: pointer;
-    transition: box-shadow 0.3s ease;
 }
 
 .icon_x:hover {
@@ -206,8 +207,8 @@ header .header-actions {
 }
 
 /* Formulário inicial escondido */
-.hero-form1 {
-    display: none;
+.hero-form.ativo {
+    display: grid;
 }
 
 /* Estilo dos inputs */
@@ -390,7 +391,8 @@ padding: 10px;
 
 
 .cta > .container > .cta-image > img{
-    width: 420px;
+    max-width: 100%;
+    max-height: 93%;
     border-radius: 8px;
     margin: 10px;
 }
