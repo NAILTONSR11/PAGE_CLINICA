@@ -308,6 +308,13 @@ header .header-actions {
         0 4px 8px rgba(0, 0, 0, 0.12);
     padding: 10px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover{
+    transform: translateY(-15px);
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .iconServ {
@@ -332,6 +339,7 @@ padding: 10px;
 }
 
 /* Carrossel Bootstrap personalizado */
+
 
 .meu-carrossel-container {
     max-width: 1100px;
@@ -365,7 +373,10 @@ padding: 10px;
 
 /* ajustar as imagens do carrossel */
 .carousel-item > img{
+    margin-top: 8px;
     border-radius: 8px;
+    box-shadow:
+        1px 1px 10px 0px #28a745;
 }
 
 /* Títulos no carrossel */
@@ -417,6 +428,224 @@ padding: 10px;
     font-weight: bold;
     justify-self: center;
 }
+
+/* Estrutura da clinica */
+
+.estrutura{
+    margin-top: 80px;
+    padding-bottom: 20px;
+    padding: 10px;
+}
+.estrutura > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto;
+    gap: 20px;
+    height: 53vh;
+}
+
+.estrutura > .container > .estrutura-text{
+    grid-row: 1/10;
+    height: 100%;
+    display: grid;
+    & h1{
+        font-size: 45px;
+    }
+
+    & p{
+        font-size: 25px;
+    }
+
+    & ul{
+        margin-top: -30px;
+    }
+
+    & .btn{
+        justify-self: left;
+        grid-row: 4/4;
+        margin-bottom: 10px;
+    }
+}
+
+.estrutura > .container > .estrutura-image{
+    background-image: url('/src/assets/imgs/recepcao.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    width: 100%;
+    height: 42vh;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0px #28a7468f;
+    top: 25px;
+    grid-column: 2/3;
+}
+
+/* Listas de imagens mini */
+.estrutura-mini-images{
+    display: flex;
+    gap: 5px;
+    width: 545px;
+    grid-row: 9/10;
+    grid-column: 2/3;
+    margin: 0 auto;
+}
+
+.estrutura-mini-images > .list_img{
+display: inline;
+width: 100px;
+height: 60px;
+border: 1px solid #28a745;
+cursor: pointer;
+border-radius: 5px;
+margin: 0 auto;
+}
+
+.estrutura-mini-images > .list_img:hover{
+    transform: translateY(-10px);
+    transition: 0.2s ease-in-out;
+}
+
+
+/* Depoimentos */
+
+.testemunhas {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testemunhas .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testemunhas .title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testemunhas .subtt {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.testimonial-text {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.depoimento {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.depoimento:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.depoimento img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 3px solid #28a745;
+}
+
+.depoimento p {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.depoimento span {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-top: 10px;
+}
+
+/* LOCALIZAÇÃO */
+
+.localizacao{
+    background-color: #28a745;
+    color: #333;
+    font-size: 1.5rem;
+    padding: 20px;
+
+    & h1{
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
+
+.localizacao > .container > .mapa{
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    width: 68%;
+    
+}
+
+/* Redes Sociais */
+.Redes {
+  background: #f9f9f9;
+  padding: 60px 20px; 
+  text-align: center; 
+}
+
+/* Título principal */
+.Redes .title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.Redes .subtt {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Container dos ícones */
+.Redes .redes-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Estilo dos ícones */
+.Redes .redes-content a img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* Hover nos ícones */
+.Redes .redes-content a img:hover {
+  transform: scale(1.2); /* Aumenta o ícone em 20% */
+}
+
+
 
 
 
