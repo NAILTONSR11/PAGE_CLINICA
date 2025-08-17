@@ -95,3 +95,10 @@ minImg5.addEventListener('click', () => {
   Estru.style.backgroundImage = `url(${imagenEstru[4]})`;
 });
 
+/* MENU MOBILE */
+
+const menu = document.querySelector('.menu-img');
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
