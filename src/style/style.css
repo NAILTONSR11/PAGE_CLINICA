@@ -975,7 +975,9 @@ display: none;
     white-space: normal;
 }
 
-
+    .info{
+        display: grid;
+      }
     .nav{
         display: none;
     }
@@ -1086,3 +1088,134 @@ margin: 0 auto;
   }
 }
 
+/* Telas extra pequenas (smartphones 420px) */
+@media (max-width: 420px) {
+
+    .container{
+        border: 2px solid;
+    }
+
+    .my-5{
+        height: 50vh;
+        width: 80vw;
+    }
+    .mx-auto {
+        width: 100%;
+        height: 100%;
+    }
+
+  /* HEADER */
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 10px;
+    height: 60px;
+  }
+
+  .logo {
+    top: 5px;
+    left: 5px;
+  }
+
+  .menu-modal {
+    right: 5px;
+    padding: 4px;
+  }
+
+  .menu-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pesquisa_inicial,
+  .icon-search,
+  .btn-contato-form1 {
+    display: none;
+  }
+
+    .info{
+        display: grid;
+      }
+  /* HERO */
+  .hero-content {
+    height: 40vh;
+    padding: 10px 0;
+  }
+
+  .hero-content > .hero-text > h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .hero-content > .hero-text > p {
+    font-size: 0.85rem;
+  }
+
+  .btn, .btn-form, .btnServ {
+    padding: 12px;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  /* Estrutura clínica */
+  .estrutura > .container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .estrutura > .container > .estrutura-image {
+    height: auto;
+    min-height: 160px;
+  }
+
+  .estrutura-mini-images {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .estrutura-mini-images > .list_img {
+    width: 50px;
+    height: 40px;
+  }
+
+  /* CTA */
+  .cta > .container {
+    gap: 8px;
+  }
+
+  .cta > .container > .cta-text {
+    font-size: 0.95rem;
+  }
+
+  .cta > .container > .cta-image {
+    width: 95%;
+    height: auto;
+  }
+
+  /* Localização / mapa */
+  .localizacao > .container {
+    gap: 8px;
+    padding: 5px;
+  }
+
+  .localizacao > .container > .mapa {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* Inputs e botões */
+  input, textarea {
+    font-size: 0.9rem;
+  }
+
+  /* Depoimentos */
+  .testimonial-items {
+    grid-template-columns: 1fr;
+  }
+
+  /* Redes sociais */
+  .Redes .redes-content a img {
+    width: 40px;
+    height: 40px;
+  }
+}
