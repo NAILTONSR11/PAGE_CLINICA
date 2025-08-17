@@ -1234,5 +1234,9 @@ margin: 0 auto;
 
 .hero-text{
     margin-top: 80px;
+    display: grid;
+    & a{
+      width: 200px;
+    }
 }
 }
