@@ -1092,7 +1092,8 @@ margin: 0 auto;
 @media (max-width: 420px) {
 
     .container{
-        border: 2px solid;
+        margin: 0;
+        justify-self: center;
     }
 
     .my-5{
@@ -1218,4 +1219,21 @@ margin: 0 auto;
     width: 40px;
     height: 40px;
   }
+}
+
+@media (max-width: 420px) {
+    .cta-image {
+  width: 95%;
+  aspect-ratio: 16/9;   /* ou 4/3, depende da proporção que você quer */
+  justify-self: center;
+  background-image: url('/src/assets/imgs/ChatGPT Image 11 de ago. de 2025, 23_21_14.png');
+  background-size: cover;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.hero-text{
+    border: 2px solid;
+    margin-top: 80px;
+}
 }
