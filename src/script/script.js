@@ -98,7 +98,11 @@ minImg5.addEventListener('click', () => {
 /* MENU MOBILE */
 
 const menu = document.querySelector('.menu-img');
+const menuModal = document.querySelector('.menu-content');
 
 menu.addEventListener('click', () => {
   menu.classList.toggle('open');
+  menuModal.classList.toggle('oppen');
 });
+
+

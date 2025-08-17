@@ -33,6 +33,41 @@ header nav a {
     padding: 5px;
 }
 
+/* menu mobile some */
+.menu-modal{
+    display: none;
+}
+
+.menu-content{
+display: grid;
+position: absolute;
+z-index: 1;
+justify-self: center;
+top: 70px;
+right: 20px;
+padding: 25px;
+background-color: #28a745;
+border-radius: 5px;
+text-align: center;
+font-weight: bold;
+transform: translateX(10px);
+transition: 0.5s ease-in-out;
+opacity: 0;
+}
+.menu-content.oppen{
+    opacity: 1;
+}
+
+.menu-content a{
+text-decoration: none;
+margin: 5px;
+color: #111111;
+}
+
+.menu-content a:hover{
+    border-bottom: 1px solid #333;
+}
+
 /* Efeito hover nos links do menu */
 header nav a:hover {
     border: 2px solid #28a745;
@@ -876,10 +911,6 @@ margin: 0 auto;
 /* Telas extra pequenas (smartphones pequenos) */
 @media (max-width: 480px) {
 
-    /*testes borda*/
-    .container{
-        /* border: 2px solid; */
-    }
 
 .header-content {
   position: relative;
@@ -900,6 +931,7 @@ margin: 0 auto;
 }
 
 .menu-modal {
+  display: block;
   position: absolute;
   gap: 8px;
   right: 10px;
@@ -944,7 +976,7 @@ display: none;
 }
 
 
-    nav{
+    .nav{
         display: none;
     }
   /* Hero */
@@ -972,6 +1004,20 @@ display: none;
   .hero {
     padding: 20px 10px;
   }
+
+    /* chamada */
+  .cta-image {
+  width: 95%;
+  aspect-ratio: 16/9;   /* ou 4/3, depende da proporção que você quer */
+  justify-self: center;
+  background-image: url('/src/assets/imgs/ChatGPT Image 11 de ago. de 2025, 23_21_14.png');
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.cta-image img {
+display: none;
+}
 
   /* Estrutura clínica */
 
