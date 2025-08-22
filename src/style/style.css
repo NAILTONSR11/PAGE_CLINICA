@@ -726,7 +726,7 @@ margin: 0 auto;
   position: fixed;
   bottom: 30px;
   right: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  width: 80px;
 }
 
 
