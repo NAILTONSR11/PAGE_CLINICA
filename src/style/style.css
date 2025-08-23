@@ -726,7 +726,11 @@ margin: 0 auto;
   position: fixed;
   bottom: 30px;
   right: 20px;
-  width: 80px;
+  width: 70px;
+}
+
+.botao-waths:hover{
+  transform: scale(1.1); /* Aumenta o ícone em 20% */
 }
 
 
@@ -913,8 +917,26 @@ margin: 0 auto;
 /* Telas extra pequenas (smartphones pequenos) */
 @media (max-width: 480px) {
 
+  .title{
+    font-size: 30px;
+  }
+  .subtt{
+    font-size: 20px;
+  }
+
 .logo1{
   margin-top: -25px;
+}
+.contatos > .info span{
+  margin-bottom: -35px;
+}
+
+.whyCon{
+    height: 75vh;
+
+    & a{
+      margin-top: -100px;
+    }
 }
 
 .header-content {
@@ -1271,4 +1293,15 @@ margin: 0 auto;
     top: 385px;
     right: 30px;
 }
+}
+
+/* responsividade de telas por autura */
+@media (max-height: 674px){
+  .estrutura-mini-images {
+    margin-top: -150px;
+  }
+
+  .testemunhas{
+    margin-top: 70px;
+  }
 }
